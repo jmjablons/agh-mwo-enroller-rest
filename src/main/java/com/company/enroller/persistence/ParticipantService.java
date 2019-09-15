@@ -19,6 +19,7 @@ public class ParticipantService {
 		return (Participant) connector.getSession().get(Participant.class, login);
 	}
 
+	@SuppressWarnings("unchecked")
 	public Collection<Participant> getAll() {
 		return connector.getSession().createCriteria(Participant.class).list();
 	}
